@@ -1,0 +1,34 @@
+.pokemon-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pokemon-img-container img {
+  width: 100%;
+}
+
+.pokemon-values-container {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "pokemon-altura pokemon-tipo"
+    "pokemon-peso pokemon-tipo";
+  padding: 15px 30px;
+}
+.pokemon-altura {
+  grid-area: pokemon-altura;
+}
+.pokemon-peso {
+  grid-area: pokemon-peso;
+}
+.pokemon-tipo {
+  grid-area: pokemon-tipo;
+}
+
+.pokemon-values-container h4 {
+  margin: 0;
+}
