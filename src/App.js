@@ -1,10 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import "./App.css";
 import { UseFecth } from "./components/UseFetch.jsx";
 import Cards from "./components/Cards/Cards.jsx";
-import Pokemon from "./components/Pokemon/Pokemon.jsx";
-import Appjs from "./App.js";
+
+
 
 function App() {
   const [url, setUrl] = useState(
