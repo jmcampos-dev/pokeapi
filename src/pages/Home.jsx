@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/pokeapi" element={<App />} />
           <Route path="/pokemon/:name" element={<Pokemon />} />
         </Routes>
       </BrowserRouter>
