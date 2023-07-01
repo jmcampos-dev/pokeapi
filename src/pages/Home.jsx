@@ -6,9 +6,9 @@ import Pokemon from "../components/Pokemon/Pokemon.jsx";
 export default function Home() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/pokeapi">
         <Routes>
-          <Route path="/pokeapi" element={<App />} />
+          <Route path="/" element={<App />} />
           <Route path="/pokemon/:name" element={<Pokemon />} />
         </Routes>
       </BrowserRouter>
