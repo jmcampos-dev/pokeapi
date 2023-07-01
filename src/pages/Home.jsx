@@ -11,6 +11,7 @@ export default function Home() {
           <Route path={`/`} element={<App />} />
           <Route path={`${process.env.PUBLIC_URL}/`} element={<App />} />
           <Route path={`${process.env.PUBLIC_URL}/pokemon/:name`} element={<Pokemon />} />
+          <Route path={`/pokemon/:name`} element={<Pokemon />} />
         </Routes>
       </BrowserRouter>
     </>
