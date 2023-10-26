@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-export const UseFecth = (url) => {
+export const UseFetch = (url) => {
+  // Creamos un estado para almacenar los datos de la API
   const [resultado, setResultado] = useState({
     cargando: true,
     data: null,
@@ -8,9 +9,10 @@ export const UseFecth = (url) => {
     prevPage: null,
     hp: null,
     attack: null,
-    defence: null,
+    defense: null,
   });
 
+  // Usamos useEffect para que se ejecute la función GetDatos() cuando se monte el componente y cuando cambie la url
   useEffect(() => {
     GetDatos(url);
   }, [url]);
@@ -23,7 +25,7 @@ export const UseFecth = (url) => {
       prevPage: null,
       hp: null,
       attack: null,
-      defence: null,
+      defense: null,
     });
 
     fetch(url)
@@ -36,7 +38,7 @@ export const UseFecth = (url) => {
           prevPage: response.previous,
           hp: response,
           attack: response,
-          defence: response,
+          defense: response,
         })
       );
   }
@@ -44,4 +46,4 @@ export const UseFecth = (url) => {
   return resultado;
 };
 
-export default UseFecth;
+export default UseFetch;

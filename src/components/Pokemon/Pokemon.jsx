@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import UseFecth from "../UseFetch.jsx";
+import UseFetch from "../UseFetch.jsx";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 import "./Pokemon.css";
@@ -29,8 +29,8 @@ const MainDic = {
 export default function Pokemon() {
   const params = useParams();
   const url = `https://pokeapi.co/api/v2/pokemon/${params.name}`;
-  const estado = UseFecth(url);
-  const { data, hp, attack, defence } = estado;
+  const estado = UseFetch(url);
+  const { data, hp, attack, defense } = estado;
 
   return (
     <>
@@ -67,7 +67,7 @@ export default function Pokemon() {
                   <h5>DEF</h5>
                   <ProgressBar
                     className="stats-progress"
-                    completed={defence.stats[1].base_stat.toString()}
+                    completed={defense.stats[1].base_stat.toString()}
                     maxCompleted={250}
                     height="25"
                     bgColor="#BAE6FF"
